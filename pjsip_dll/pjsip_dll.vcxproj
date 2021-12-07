@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-Dynamic|Win32">
+      <Configuration>Debug-Dynamic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-Dynamic|x64">
+      <Configuration>Debug-Dynamic</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{11220C5E-2161-442A-B18E-BB4019AAB7E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pjsip_dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\pjsip\lib;..\pjlib\lib;..\pjlib-util\lib;..\pjmedia\lib;..\pjnath\lib;..\third_party\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-i386-Win32-vc14-Debug-Dynamic.lib;pjlib-util-i386-Win32-vc14-Debug-Dynamic.lib;pjsip-core-i386-Win32-vc14-Debug-Dynamic.lib;pjsip-simple-i386-Win32-vc14-Debug.lib;pjsip-ua-i386-Win32-vc14-Debug-Dynamic.lib;pjsua-lib-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-audiodev-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-codec-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-videodev-i386-Win32-vc14-Debug-Dynamic.lib;pjnath-i386-Win32-vc14-Debug-Dynamic.lib;libsrtp-i386-Win32-vc14-Debug-Dynamic.lib;libresample-i386-Win32-vc14-Debug-Dynamic.lib;libspeex-i386-Win32-vc14-Debug-Dynamic.lib;libbaseclasses-i386-Win32-vc14-Debug-Dynamic.lib;libg7221codec-i386-Win32-vc14-Debug-Dynamic.lib;libgsmcodec-i386-Win32-vc14-Debug-Dynamic.lib;libilbccodec-i386-Win32-vc14-Debug-Dynamic.lib;libmilenage-i386-Win32-vc14-Debug-Dynamic.lib;libwebrtc-i386-Win32-vc14-Debug-Dynamic.lib;libyuv-i386-Win32-vc14-Debug-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\pjsip\lib;..\pjlib\lib;..\pjlib-util\lib;..\pjmedia\lib;..\pjnath\lib;..\third_party\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-i386-Win32-vc14-Debug-Dynamic.lib;pjlib-util-i386-Win32-vc14-Debug-Dynamic.lib;pjsip-core-i386-Win32-vc14-Debug-Dynamic.lib;pjsip-simple-i386-Win32-vc14-Debug.lib;pjsip-ua-i386-Win32-vc14-Debug-Dynamic.lib;pjsua-lib-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-audiodev-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-codec-i386-Win32-vc14-Debug-Dynamic.lib;pjmedia-videodev-i386-Win32-vc14-Debug-Dynamic.lib;pjnath-i386-Win32-vc14-Debug-Dynamic.lib;libsrtp-i386-Win32-vc14-Debug-Dynamic.lib;libresample-i386-Win32-vc14-Debug-Dynamic.lib;libspeex-i386-Win32-vc14-Debug-Dynamic.lib;libbaseclasses-i386-Win32-vc14-Debug-Dynamic.lib;libg7221codec-i386-Win32-vc14-Debug-Dynamic.lib;libgsmcodec-i386-Win32-vc14-Debug-Dynamic.lib;libilbccodec-i386-Win32-vc14-Debug-Dynamic.lib;libmilenage-i386-Win32-vc14-Debug-Dynamic.lib;libwebrtc-i386-Win32-vc14-Debug-Dynamic.lib;libyuv-i386-Win32-vc14-Debug-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-x86_64-x64-vc14-Debug-Dynamic.lib;pjlib-util-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-core-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-simple-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-ua-x86_64-x64-vc14-Debug-Dynamic.lib;pjsua-lib-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-audiodev-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-codec-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-videodev-x86_64-x64-vc14-Debug-Dynamic.lib;pjnath-x86_64-x64-vc14-Debug-Dynamic.lib;libsrtp-x86_64-x64-vc14-Debug-Dynamic.lib;libresample-x86_64-x64-vc14-Debug-Dynamic.lib;libspeex-x86_64-x64-vc14-Debug-Dynamic.lib;libbaseclasses-x86_64-x64-vc14-Debug-Dynamic.lib;libg7221codec-x86_64-x64-vc14-Debug-Dynamic.lib;libgsmcodec-x86_64-x64-vc14-Debug-Dynamic.lib;libilbccodec-x86_64-x64-vc14-Debug-Dynamic.lib;libmilenage-x86_64-x64-vc14-Debug-Dynamic.lib;libwebrtc-x86_64-x64-vc14-Debug-Dynamic.lib;libyuv-x86_64-x64-vc14-Debug-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)pjlib\lib;$(SolutionDir)pjlib-util\lib;$(SolutionDir)lib;$(SolutionDir)pjmedia\lib;$(SolutionDir)pjnath\lib;$(SolutionDir)pjsip\lib;$(SolutionDir)pjsip-apps\lib;$(SolutionDir)third_party\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-x86_64-x64-vc14-Debug-Dynamic.lib;pjlib-util-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-core-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-simple-x86_64-x64-vc14-Debug-Dynamic.lib;pjsip-ua-x86_64-x64-vc14-Debug-Dynamic.lib;pjsua-lib-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-audiodev-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-codec-x86_64-x64-vc14-Debug-Dynamic.lib;pjmedia-videodev-x86_64-x64-vc14-Debug-Dynamic.lib;pjnath-x86_64-x64-vc14-Debug-Dynamic.lib;libsrtp-x86_64-x64-vc14-Debug-Dynamic.lib;libresample-x86_64-x64-vc14-Debug-Dynamic.lib;libspeex-x86_64-x64-vc14-Debug-Dynamic.lib;libbaseclasses-x86_64-x64-vc14-Debug-Dynamic.lib;libg7221codec-x86_64-x64-vc14-Debug-Dynamic.lib;libgsmcodec-x86_64-x64-vc14-Debug-Dynamic.lib;libilbccodec-x86_64-x64-vc14-Debug-Dynamic.lib;libmilenage-x86_64-x64-vc14-Debug-Dynamic.lib;libwebrtc-x86_64-x64-vc14-Debug-Dynamic.lib;libyuv-x86_64-x64-vc14-Debug-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)pjlib\lib;$(SolutionDir)pjlib-util\lib;$(SolutionDir)lib;$(SolutionDir)pjmedia\lib;$(SolutionDir)pjnath\lib;$(SolutionDir)pjsip\lib;$(SolutionDir)pjsip-apps\lib;$(SolutionDir)third_party\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\pjsip\lib;..\pjlib\lib;..\pjlib-util\lib;..\pjmedia\lib;..\pjnath\lib;..\third_party\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-i386-Win32-vc14-Release-Dynamic.lib;pjlib-util-i386-Win32-vc14-Release-Dynamic.lib;pjsip-core-i386-Win32-vc14-Release-Dynamic.lib;pjsip-simple-i386-Win32-vc14-Release.lib;pjsip-ua-i386-Win32-vc14-Release-Dynamic.lib;pjsua2-lib-i386-Win32-vc14-Release-Dynamic.lib;pjsua-lib-i386-Win32-vc14-Release-Dynamic.lib;pjmedia-i386-Win32-vc14-Release-Dynamic.lib;pjmedia-audiodev-i386-Win32-vc14-Release-Dynamic.lib;pjmedia-codec-i386-Win32-vc14-Release-Dynamic.lib;pjmedia-videodev-i386-Win32-vc14-Release-Dynamic.lib;pjnath-i386-Win32-vc14-Release-Dynamic.lib;libsrtp-i386-Win32-vc14-Release-Dynamic.lib;libresample-i386-Win32-vc14-Release-Dynamic.lib;libspeex-i386-Win32-vc14-Release-Dynamic.lib;libbaseclasses-i386-Win32-vc14-Release-Dynamic.lib;libg7221codec-i386-Win32-vc14-Release-Dynamic.lib;libgsmcodec-i386-Win32-vc14-Release-Dynamic.lib;libilbccodec-i386-Win32-vc14-Release-Dynamic.lib;libmilenage-i386-Win32-vc14-Release-Dynamic.lib;libwebrtc-i386-Win32-vc14-Release-Dynamic.lib;libyuv-i386-Win32-vc14-Release-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;PJSIP_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\pjsip\include;..\pjlib\include;..\pjlib-util\include;..\pjmedia\include;..\pjnath\include;..\third_party\resample\include;..\third_party\srtp\include;..\third_party\speex\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\pjsip\lib;..\pjlib\lib;..\pjlib-util\lib;..\pjmedia\lib;..\pjnath\lib;..\third_party\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iphlpapi.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;pjlib-x86_64-x64-vc14-Release-Dynamic.lib;pjlib-util-x86_64-x64-vc14-Release-Dynamic.lib;pjsip-core-x86_64-x64-vc14-Release-Dynamic.lib;pjsip-simple-x86_64-x64-vc14-Release-Dynamic.lib;pjsip-ua-x86_64-x64-vc14-Release-Dynamic.lib;pjsua2-lib-x86_64-x64-vc14-Release-Dynamic.lib;pjsua-lib-x86_64-x64-vc14-Release-Dynamic.lib;pjmedia-x86_64-x64-vc14-Release-Dynamic.lib;pjmedia-audiodev-x86_64-x64-vc14-Release-Dynamic.lib;pjmedia-codec-x86_64-x64-vc14-Release-Dynamic.lib;pjmedia-videodev-x86_64-x64-vc14-Release-Dynamic.lib;pjnath-x86_64-x64-vc14-Release-Dynamic.lib;libsrtp-x86_64-x64-vc14-Release-Dynamic.lib;libresample-x86_64-x64-vc14-Release-Dynamic.lib;libspeex-x86_64-x64-vc14-Release-Dynamic.lib;libbaseclasses-x86_64-x64-vc14-Release-Dynamic.lib;libg7221codec-x86_64-x64-vc14-Release-Dynamic.lib;libgsmcodec-x86_64-x64-vc14-Release-Dynamic.lib;libilbccodec-x86_64-x64-vc14-Release-Dynamic.lib;libmilenage-x86_64-x64-vc14-Release-Dynamic.lib;libwebrtc-x86_64-x64-vc14-Release-Dynamic.lib;libyuv-x86_64-x64-vc14-Release-Dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pjsip_dll.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-Dynamic|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="pjsip_dll.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exports.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

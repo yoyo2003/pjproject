@@ -1,0 +1,17 @@
+﻿  dllmain.cpp
+  pjsip_dll.cpp
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.h(55,3): warning C4091: 'typedef ': ignored on left of 'pjsua_settings' when no variable is declared
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.h(64,53): warning C4229: anachronism used: modifiers on data are ignored
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.cpp(48,46): warning C4229: anachronism used: modifiers on data are ignored
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.cpp(103,31): warning C4018: '<': signed/unsigned mismatch
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.cpp(112,31): warning C4018: '<': signed/unsigned mismatch
+E:\GitHub\yoyo\Repos\pjproject\pjproject\pjsip_dll\pjsip_dll.cpp(121,31): warning C4018: '<': signed/unsigned mismatch
+  stdafx.cpp
+  Generating Code...
+exports.def(2): warning LNK4017: SendTestLog statement not supported for the target platform; ignored
+exports.def(3): warning LNK4017: SetPjSipLogging statement not supported for the target platform; ignored
+exports.def(3): warning LNK4017: InitPjSip statement not supported for the target platform; ignored
+     Creating library E:\GitHub\yoyo\Repos\pjproject\pjproject\Debug-Dynamic\pjsip_dll.lib and object E:\GitHub\yoyo\Repos\pjproject\pjproject\Debug-Dynamic\pjsip_dll.exp
+pjsip_dll.exp : warning LNK4070: /OUT:PJSIP_DLL_EXPORTS.dll directive in .EXP differs from output filename 'E:\GitHub\yoyo\Repos\pjproject\pjproject\Debug-Dynamic\pjsip_dll.dll'; ignoring directive
+MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'libcmtd.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+  pjsip_dll.vcxproj -> E:\GitHub\yoyo\Repos\pjproject\pjproject\Debug-Dynamic\pjsip_dll.dll

@@ -1,0 +1,4 @@
+LIBRARY "PJSIP_DLL_EXPORTS"
+SendTestLog
+SetPjSipLogging
+InitPjSip

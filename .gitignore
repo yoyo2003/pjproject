@@ -68,3 +68,10 @@ tests/pjsua/wavs/tmp*.wav
 tests/pjsua/tools/cmp_wav
 tests/pjsua/tools/cmp_wav.dSYM
 tests/pjsua/logs
+/PjSipDllTester/obj/Debug
+/PjSipWrapper/obj/Debug
+/pjsip_dll/Debug
+/pjsip_dll/Release
+/pjsip_dll/x64/Release
+/Debug-Dynamic
+/pjsip_dll/Debug-Dynamic
