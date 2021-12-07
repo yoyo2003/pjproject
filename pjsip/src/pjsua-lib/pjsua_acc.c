@@ -1574,7 +1574,9 @@ done:
 	pj_str_t reg_contact;
 
 	acc->rfc5626_status = OUTBOUND_WANTED;
-	len = acc->contact.slen + acc->cfg.reg_contact_params.slen +
+	len = acc->contact.slen +
+	      acc->cfg.contact_params.slen +
+	      acc->cfg.reg_contact_params.slen +
 	      acc->cfg.reg_contact_uri_params.slen +
 	      (need_outbound?
 	       (acc->rfc5626_instprm.slen + acc->rfc5626_regprm.slen): 0);
@@ -2828,11 +2830,11 @@ PJ_DEF(pj_status_t) pjsua_acc_set_registration( pjsua_acc_id acc_id,
 	    PJ_UNUSED_ARG(d);
 
 	    h = pjsip_authorization_hdr_create(tdata->pool);
-	    h->scheme = pj_str("Digest");
+	    h->scheme = pjsip_DIGEST_STR;
 	    h->credential.digest.username = acc->cred[0].username;
 	    h->credential.digest.realm = acc->srv_domain;
 	    h->credential.digest.uri = pj_str(uri);
-	    h->credential.digest.algorithm = pj_str("md5");
+	    h->credential.digest.algorithm = pjsip_MD5_STR;
 
 	    pjsip_msg_add_hdr(tdata->msg, (pjsip_hdr*)h);
 	}

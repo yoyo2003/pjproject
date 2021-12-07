@@ -3001,6 +3001,11 @@ typedef struct pjsua_transport_config
      * port number specified in \a port. Note that this setting is only
      * applicable when the start port number is non zero.
      *
+     * Example: \a port=5000, \a port_range=4
+     * - Available ports: 5000, 5001, 5002, 5003, 5004 (SIP transport)
+     * 
+     * Available ports are in the range of [\a port, \a port + \a port_range]. 
+     * 
      * Default value is zero.
      */
     unsigned		port_range;
@@ -4082,6 +4087,12 @@ typedef struct pjsua_acc_config
 
     /**
      * Media transport config.
+     * 
+     * For \a port and \a port_range settings, RTCP port is selected as 
+     * RTP port+1.
+     * Example: \a port=5000, \a port_range=4
+     * - Available ports: 5000, 5002, 5004 (Media/RTP transport)
+     *                    5001, 5003, 5005 (Media/RTCP transport)
      */
     pjsua_transport_config rtp_cfg;
 
@@ -6041,7 +6052,7 @@ PJ_DECL(pj_status_t) pjsua_call_get_stream_info(pjsua_call_id call_id,
  *
  * @param call_id	The call identification.
  * @param med_idx	Media stream index.
- * @param psi		To be filled with the stream statistic.
+ * @param stat		To be filled with the stream statistic.
  *
  * @return		PJ_SUCCESS on success or the appropriate error.
  */
@@ -7458,7 +7469,7 @@ PJ_DECL(pj_status_t) pjsua_player_get_port(pjsua_player_id id,
  * Get additional info about the file player. This operation is not valid
  * for playlist.
  *
- * @param port		The file player ID.
+ * @param id		The file player ID.
  * @param info		The info.
  *
  * @return		PJ_SUCCESS on success or the appropriate error code.
@@ -7809,7 +7820,7 @@ typedef struct pjsua_ext_snd_dev pjsua_ext_snd_dev;
 /**
  * Create an extra sound device and register it to conference bridge.
  *
- * @param snd_param	Sound device port param. Currently this only supports
+ * @param param	Sound device port param. Currently this only supports
  *			mono channel, so channel count must be set to 1.
  * @param p_snd		The extra sound device instance.
  *
@@ -7822,7 +7833,7 @@ PJ_DECL(pj_status_t) pjsua_ext_snd_dev_create(pjmedia_snd_port_param *param,
 /**
  * Destroy an extra sound device and unregister it from conference bridge.
  *
- * @param p_snd		The extra sound device instance.
+ * @param snd		The extra sound device instance.
  *
  * @return		PJ_SUCCESS on success or the appropriate error code.
  */
@@ -7964,6 +7975,31 @@ pjsua_media_transports_attach( pjsua_media_transport tp[],
 /*
  * Video devices API
  */
+
+
+/**
+ * Controls whether PJSUA-LIB should not initialize video device subsystem
+ * in the PJSUA initialization. The video device subsystem initialization
+ * may need to open cameras to enumerates available cameras and their
+ * capabilities, which may not be preferable for some applications because
+ * it may trigger privacy-alert/permission notification on application startup
+ * (e.g: on Android app).
+ *
+ * If this is set, later application should manually initialize video device
+ * subsystem when it needs to use any video devices (camera and renderer),
+ * i.e: by invoking pjmedia_vid_dev_subsys_init() for PJSUA or
+ * VidDevManager::initSubsys() for PJSUA2.
+ *
+ * Note that pjmedia_vid_dev_subsys_init() should not be called multiple
+ * times (unless each has corresponding pjmedia_vid_dev_subsys_shutdown()),
+ * while VidDevManager::initSubsys() is safe to be called multiple times.
+ *
+ * Default: 0 (no)
+ */
+#ifndef PJSUA_DONT_INIT_VID_DEV_SUBSYS
+#   define PJSUA_DONT_INIT_VID_DEV_SUBSYS	0
+#endif
+
 
 /**
  * Get the number of video devices installed in the system.
@@ -8235,7 +8271,7 @@ typedef struct pjsua_vid_win_info
 /**
  * Enumerates all video windows.
  *
- * @param id		Array of window ID to be initialized.
+ * @param wids		Array of window ID to be initialized.
  * @param count		On input, specifies max elements in the array.
  *			On return, it contains actual number of elements
  *			that have been initialized.
